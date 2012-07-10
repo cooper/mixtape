@@ -20,7 +20,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSWindow *optionsWindow;
-@property (assign) IBOutlet FebView *febView;
+@property (assign) IBOutlet WebView *webView;
+@property FebView *febView;
 @property AgnesManager *clientManager;
 
 // called from menu->main->preferences

@@ -1,5 +1,10 @@
 document.write("hi Again<br>");
 
 function FebHandleEvent(data) {
-    setTimeout(function(){document.write("Hi!");},1000);
+    document.write(data);
+    document.write("<br>");
+    document.write(data[0]);
+    document.write("<br>");
+    document.write(data[1]);
+    document.write("<br>");
 }

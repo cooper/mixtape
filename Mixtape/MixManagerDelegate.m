@@ -8,6 +8,7 @@
 // Documentation: https://github.com/cooper/mixtape/wiki/AgnesManager
 //
 
+#import "MixAppDelegate.h"
 #import "MixManagerDelegate.h"
 #import "MixSession.h"
 
@@ -17,6 +18,9 @@
 - (void)createConnectionSession:(AgnesManager *)manager connection:(AgnesConnection *)conn {
     MixSession *sess = [[MixSession alloc] init];
     conn.session = sess;
+    NSLog(@"calling sendMessage");
+    NSDictionary *args = [NSDictionary dictionaryWithObject:@"test" forKey:@"param"];
+    [[APP_DELEGATE febView] sendMessage:@"hi" withArguments:args];
 }
 
 @end

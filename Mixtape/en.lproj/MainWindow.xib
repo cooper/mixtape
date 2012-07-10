@@ -51,7 +51,7 @@
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
-						<object class="WebView" id="834948493">
+						<object class="WebView" id="503043680">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">256</int>
 							<set class="NSMutableSet" key="NSDragTypes">
@@ -91,7 +91,7 @@
 					</array>
 					<string key="NSFrameSize">{564, 283}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView" ref="834948493"/>
+					<reference key="NSNextKeyView" ref="503043680"/>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1058}}</string>
@@ -111,11 +111,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">febView</string>
+						<string key="label">webView</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="834948493"/>
+						<reference key="destination" ref="503043680"/>
 					</object>
-					<int key="connectionID">673</int>
+					<int key="connectionID">675</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -135,11 +135,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">febView</string>
+						<string key="label">webView</string>
 						<reference key="source" ref="223839594"/>
-						<reference key="destination" ref="834948493"/>
+						<reference key="destination" ref="503043680"/>
 					</object>
-					<int key="connectionID">672</int>
+					<int key="connectionID">674</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -180,9 +180,9 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="1006"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="834948493"/>
+							<reference ref="503043680"/>
 							<object class="IBNSLayoutConstraint" id="378823501">
-								<reference key="firstItem" ref="834948493"/>
+								<reference key="firstItem" ref="503043680"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="1006"/>
@@ -198,7 +198,7 @@
 								<reference key="containingView" ref="1006"/>
 							</object>
 							<object class="IBNSLayoutConstraint" id="928082621">
-								<reference key="firstItem" ref="834948493"/>
+								<reference key="firstItem" ref="503043680"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="1006"/>
@@ -214,7 +214,7 @@
 								<reference key="containingView" ref="1006"/>
 							</object>
 							<object class="IBNSLayoutConstraint" id="507508595">
-								<reference key="firstItem" ref="834948493"/>
+								<reference key="firstItem" ref="503043680"/>
 								<int key="firstAttribute">4</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="1006"/>
@@ -230,7 +230,7 @@
 								<reference key="containingView" ref="1006"/>
 							</object>
 							<object class="IBNSLayoutConstraint" id="863548078">
-								<reference key="firstItem" ref="834948493"/>
+								<reference key="firstItem" ref="503043680"/>
 								<int key="firstAttribute">6</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="1006"/>
@@ -255,7 +255,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">634</int>
-						<reference key="object" ref="834948493"/>
+						<reference key="object" ref="503043680"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="1006"/>
 					</object>
@@ -314,7 +314,6 @@
 						</object>
 					</dictionary>
 				</object>
-				<string key="634.CustomClassName">FebView</string>
 				<boolean value="NO" key="634.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="634.IBPluginDependency">com.apple.WebKitIBPlugin</string>
 				<string key="664.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -326,7 +325,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">673</int>
+			<int key="maxID">675</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

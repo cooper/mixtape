@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-@interface FebView : WebView
+@interface FebView : NSObject {
+    WebView *webView;
+    NSMutableArray *buffer;
+    BOOL loadComplete;
+}
 
-- (void)sendMessage:(NSString *)command withArguments:(NSDictionary *)arguments;
+- (id)initWithView:(WebView *)view;
+- (id)sendMessage:(NSString *)command withArguments:(NSDictionary *)arguments;
 
 @end
