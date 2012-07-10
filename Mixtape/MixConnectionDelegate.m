@@ -26,9 +26,9 @@
 // this message is forwarded: AgnesSocket ->
 // AgnesSocketDelegate(AgnesConnection) -> AgnesConnectionDelegate.
 - (void)onRawLine:(AgnesConnection *)connection line:(NSString *)line {
-    NSTextView *textview = [APP_DELEGATE textview];
-    [[[textview textStorage] mutableString] appendString: [NSString stringWithFormat:@"%@\n", line]];
-    [textview scrollRangeToVisible:NSMakeRange(textview.string.length, 0)];
+    //NSTextView *textview = [connection.session textView];
+    //[[[textview textStorage] mutableString] appendString: [NSString stringWithFormat:@"%@\n", line]];
+    //[textview scrollRangeToVisible:NSMakeRange(textview.string.length, 0)];
 }
 
 @end

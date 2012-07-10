@@ -10,6 +10,7 @@
 #import <Agnes/Agnes.h>
 #import "MixConnectionDelegate.h"
 #import "MixManagerDelegate.h"
+#import "FebView.h"
 #define APP_DELEGATE (MixAppDelegate *)[[NSApplication sharedApplication] delegate]
 
 @interface MixAppDelegate : NSObject <NSApplicationDelegate> {
@@ -19,7 +20,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSWindow *optionsWindow;
-@property (assign) IBOutlet NSTextView *textview;
+@property (assign) IBOutlet FebView *febView;
 @property AgnesManager *clientManager;
 
 // called from menu->main->preferences

@@ -10,7 +10,7 @@
 
 @implementation MixAppDelegate
 
-@synthesize clientManager, window, optionsWindow, textview;
+@synthesize clientManager, window, optionsWindow, febView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -22,13 +22,17 @@
     manDelegate   = [[MixManagerDelegate alloc] init];
     clientManager = [[AgnesManager alloc] initWithDelegate:manDelegate];
     clientManager.connectionDelegate = connDelegate;
-    clientManager.defaultNick = @"RacistBot";
-    clientManager.defaultUser = @"uracist";
-    clientManager.defaultReal = @"I am Raceist.";
+    clientManager.defaultReal = NSFullUserName();
+    clientManager.defaultNick = [[clientManager.defaultReal componentsSeparatedByString:@" "] objectAtIndex:0];
+    clientManager.defaultUser = [clientManager.defaultNick lowercaseString];
 
     AgnesConnection *conn = [clientManager createConnection:@"irc.mac-mini.org" port:6697 ssl:true];
     [conn connect];
     NSLog(@"attempting");
+    //NSLog(@"%@", [[webview mainFrame] DOMDocument]);
+    NSDictionary *args = [NSDictionary dictionaryWithObject:@"test" forKey:@"param"];
+    [febView sendMessage:@"hi" withArguments:args];
+    NSLog(@"past");
 }
 
 
