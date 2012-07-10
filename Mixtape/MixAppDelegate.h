@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Agnes.h"
+#import <Agnes/Agnes.h>
 #import "MixConnectionDelegate.h"
 #import "MixManagerDelegate.h"
 #define APP_DELEGATE (MixAppDelegate *)[[NSApplication sharedApplication] delegate]

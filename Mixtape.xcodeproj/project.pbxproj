@@ -7,51 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A703DC6B15A27FF400B09F7C /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A703DC6715A27FF400B09F7C /* AsyncSocket.h */; };
-		A703DC6C15A27FF400B09F7C /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A703DC6815A27FF400B09F7C /* AsyncSocket.m */; };
-		A703DC6D15A27FF400B09F7C /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A703DC6915A27FF400B09F7C /* AsyncUdpSocket.h */; };
-		A703DC6E15A27FF400B09F7C /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A703DC6A15A27FF400B09F7C /* AsyncUdpSocket.m */; };
 		A72FD7BD159FF81E00B322CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72FD7BC159FF81E00B322CF /* Cocoa.framework */; };
 		A72FD7C7159FF81E00B322CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72FD7C5159FF81E00B322CF /* InfoPlist.strings */; };
 		A72FD7C9159FF81E00B322CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FD7C8159FF81E00B322CF /* main.m */; };
 		A72FD7CD159FF81E00B322CF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A72FD7CB159FF81E00B322CF /* Credits.rtf */; };
 		A72FD7D0159FF81E00B322CF /* MixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FD7CF159FF81E00B322CF /* MixAppDelegate.m */; };
 		A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72FD7D1159FF81E00B322CF /* MainMenu.xib */; };
-		A72FD7E2159FFBD000B322CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72FD7BC159FF81E00B322CF /* Cocoa.framework */; };
-		A72FD7E8159FFBD000B322CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72FD7E6159FFBD000B322CF /* InfoPlist.strings */; };
-		A72FD7EC159FFBD000B322CF /* AgnesCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FD7EB159FFBD000B322CF /* AgnesCore.m */; };
-		A72FD7FE159FFE0A00B322CF /* AgnesSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A72FD7FC159FFE0A00B322CF /* AgnesSocket.h */; };
-		A72FD7FF159FFE0A00B322CF /* AgnesSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FD7FD159FFE0A00B322CF /* AgnesSocket.m */; };
-		A72FD80215A00FA700B322CF /* AgnesConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = A72FD80015A00FA700B322CF /* AgnesConnection.h */; };
-		A72FD80315A00FA700B322CF /* AgnesConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FD80115A00FA700B322CF /* AgnesConnection.m */; };
-		A758B9D515A8FF1C00A3594D /* AgnesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A758B9D315A8FF1C00A3594D /* AgnesParser.h */; };
-		A758B9D615A8FF1C00A3594D /* AgnesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A758B9D415A8FF1C00A3594D /* AgnesParser.m */; };
-		A758B9DE15A9105300A3594D /* AgnesCommands.h in Headers */ = {isa = PBXBuildFile; fileRef = A758B9DC15A9105300A3594D /* AgnesCommands.h */; };
-		A758B9DF15A9105300A3594D /* AgnesCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = A758B9DD15A9105300A3594D /* AgnesCommands.m */; };
-		A7609B2915A04A1D001792B7 /* AgnesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72FD7E1159FFBD000B322CF /* AgnesCore.framework */; };
 		A7609B4B15A07A1B001792B7 /* MixConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7609B4A15A07A1B001792B7 /* MixConnectionDelegate.m */; };
 		A7609B5015A09C6A001792B7 /* Options.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7609B4F15A09C6A001792B7 /* Options.xib */; };
 		A7609B5115A0C67A001792B7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7609B5315A0C67A001792B7 /* MainWindow.xib */; };
-		A7609B5C15A0E30B001792B7 /* Agnes.h in Headers */ = {isa = PBXBuildFile; fileRef = A7609B5B15A0E30B001792B7 /* Agnes.h */; };
-		A7609B5E15A0E445001792B7 /* AgnesConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A7609B5D15A0E445001792B7 /* AgnesConnectionDelegate.h */; };
-		A78C5D8C15AA494E007EC021 /* AgnesParserCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C5D8A15AA494E007EC021 /* AgnesParserCommand.h */; };
-		A78C5D8D15AA494E007EC021 /* AgnesParserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D8B15AA494E007EC021 /* AgnesParserCommand.m */; };
-		A78C5D9115AA7003007EC021 /* AgnesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C5D8F15AA7003007EC021 /* AgnesManager.h */; };
-		A78C5D9215AA7003007EC021 /* AgnesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D9015AA7003007EC021 /* AgnesManager.m */; };
-		A78C5D9415AA719D007EC021 /* AgnesManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C5D9315AA719D007EC021 /* AgnesManagerDelegate.h */; };
 		A78C5D9815AA7275007EC021 /* MixManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D9715AA7275007EC021 /* MixManagerDelegate.m */; };
-		A78C5D9F15AAC603007EC021 /* AgnesUser.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C5D9D15AAC602007EC021 /* AgnesUser.h */; };
-		A78C5DA015AAC603007EC021 /* AgnesUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D9E15AAC603007EC021 /* AgnesUser.m */; };
 		A78C5DD215AB343C007EC021 /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5DD115AB343C007EC021 /* OptionsWindow.m */; };
-		A78C5DD515AB9D6D007EC021 /* AgnesChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C5DD315AB9D6D007EC021 /* AgnesChannel.h */; };
-		A78C5DD615AB9D6D007EC021 /* AgnesChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5DD415AB9D6D007EC021 /* AgnesChannel.m */; };
+		A7BDBE3915ABD447008A8666 /* Agnes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BDBE3715ABD399008A8666 /* Agnes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A703DC6715A27FF400B09F7C /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Async/AsyncSocket.h; sourceTree = "<group>"; };
-		A703DC6815A27FF400B09F7C /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Async/AsyncSocket.m; sourceTree = "<group>"; };
-		A703DC6915A27FF400B09F7C /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Async/AsyncUdpSocket.h; sourceTree = "<group>"; };
-		A703DC6A15A27FF400B09F7C /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Async/AsyncUdpSocket.m; sourceTree = "<group>"; };
 		A72FD7B8159FF81E00B322CF /* Mixtape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72FD7BC159FF81E00B322CF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A72FD7BF159FF81E00B322CF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -65,40 +35,17 @@
 		A72FD7CE159FF81E00B322CF /* MixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixAppDelegate.h; sourceTree = "<group>"; };
 		A72FD7CF159FF81E00B322CF /* MixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixAppDelegate.m; sourceTree = "<group>"; };
 		A72FD7D2159FF81E00B322CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A72FD7E1159FFBD000B322CF /* AgnesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AgnesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A72FD7E5159FFBD000B322CF /* AgnesCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AgnesCore-Info.plist"; sourceTree = "<group>"; };
-		A72FD7E7159FFBD000B322CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A72FD7E9159FFBD000B322CF /* AgnesCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AgnesCore-Prefix.pch"; sourceTree = "<group>"; };
-		A72FD7EA159FFBD000B322CF /* AgnesCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgnesCore.h; sourceTree = "<group>"; };
-		A72FD7EB159FFBD000B322CF /* AgnesCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgnesCore.m; sourceTree = "<group>"; };
-		A72FD7FC159FFE0A00B322CF /* AgnesSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesSocket.h; sourceTree = "<group>"; };
-		A72FD7FD159FFE0A00B322CF /* AgnesSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesSocket.m; sourceTree = "<group>"; };
-		A72FD80015A00FA700B322CF /* AgnesConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesConnection.h; sourceTree = "<group>"; };
-		A72FD80115A00FA700B322CF /* AgnesConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesConnection.m; sourceTree = "<group>"; };
-		A758B9D315A8FF1C00A3594D /* AgnesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesParser.h; sourceTree = "<group>"; };
-		A758B9D415A8FF1C00A3594D /* AgnesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesParser.m; sourceTree = "<group>"; };
-		A758B9DC15A9105300A3594D /* AgnesCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesCommands.h; sourceTree = "<group>"; };
-		A758B9DD15A9105300A3594D /* AgnesCommands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesCommands.m; sourceTree = "<group>"; };
 		A7609B2815A04830001792B7 /* Mixtape.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mixtape.entitlements; sourceTree = "<group>"; };
 		A7609B4915A07A1B001792B7 /* MixConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixConnectionDelegate.h; sourceTree = "<group>"; };
 		A7609B4A15A07A1B001792B7 /* MixConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixConnectionDelegate.m; sourceTree = "<group>"; };
 		A7609B4F15A09C6A001792B7 /* Options.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Options.xib; sourceTree = "<group>"; };
 		A7609B5215A0C67A001792B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A7609B5B15A0E30B001792B7 /* Agnes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agnes.h; sourceTree = "<group>"; };
-		A7609B5D15A0E445001792B7 /* AgnesConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesConnectionDelegate.h; sourceTree = "<group>"; };
-		A78C5D8A15AA494E007EC021 /* AgnesParserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesParserCommand.h; sourceTree = "<group>"; };
-		A78C5D8B15AA494E007EC021 /* AgnesParserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesParserCommand.m; sourceTree = "<group>"; };
-		A78C5D8F15AA7003007EC021 /* AgnesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesManager.h; sourceTree = "<group>"; };
-		A78C5D9015AA7003007EC021 /* AgnesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesManager.m; sourceTree = "<group>"; };
-		A78C5D9315AA719D007EC021 /* AgnesManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesManagerDelegate.h; sourceTree = "<group>"; };
 		A78C5D9615AA7275007EC021 /* MixManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixManagerDelegate.h; sourceTree = "<group>"; };
 		A78C5D9715AA7275007EC021 /* MixManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixManagerDelegate.m; sourceTree = "<group>"; };
-		A78C5D9D15AAC602007EC021 /* AgnesUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesUser.h; sourceTree = "<group>"; };
-		A78C5D9E15AAC603007EC021 /* AgnesUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesUser.m; sourceTree = "<group>"; };
 		A78C5DD015AB343C007EC021 /* OptionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsWindow.h; sourceTree = "<group>"; };
 		A78C5DD115AB343C007EC021 /* OptionsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsWindow.m; sourceTree = "<group>"; };
-		A78C5DD315AB9D6D007EC021 /* AgnesChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgnesChannel.h; sourceTree = "<group>"; };
-		A78C5DD415AB9D6D007EC021 /* AgnesChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgnesChannel.m; sourceTree = "<group>"; };
+		A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Agnes.xcodeproj; path = ../Agnes/Agnes.xcodeproj; sourceTree = "<group>"; };
+		A7BDBE3715ABD399008A8666 /* Agnes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agnes.framework; path = "../../Library/Developer/Xcode/DerivedData/Mixtape-dfpovtgxfkyjurefmaxotwjhbmnm/Build/Products/Debug/Agnes.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,16 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7609B2915A04A1D001792B7 /* AgnesCore.framework in Frameworks */,
+				A7BDBE3915ABD447008A8666 /* Agnes.framework in Frameworks */,
 				A72FD7BD159FF81E00B322CF /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A72FD7DD159FFBD000B322CF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A72FD7E2159FFBD000B322CF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				A72FD7C2159FF81E00B322CF /* Mixtape */,
-				A72FD7E3159FFBD000B322CF /* AgnesCore */,
 				A72FD7BB159FF81E00B322CF /* Frameworks */,
 				A72FD7B9159FF81E00B322CF /* Products */,
+				A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				A72FD7B8159FF81E00B322CF /* Mixtape.app */,
-				A72FD7E1159FFBD000B322CF /* AgnesCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +82,7 @@
 		A72FD7BB159FF81E00B322CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7BDBE3715ABD399008A8666 /* Agnes.framework */,
 				A72FD7BC159FF81E00B322CF /* Cocoa.framework */,
 				A72FD7BE159FF81E00B322CF /* Other Frameworks */,
 			);
@@ -188,57 +127,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A72FD7E3159FFBD000B322CF /* AgnesCore */ = {
-			isa = PBXGroup;
-			children = (
-				A7609B5B15A0E30B001792B7 /* Agnes.h */,
-				A78C5D8F15AA7003007EC021 /* AgnesManager.h */,
-				A78C5D9015AA7003007EC021 /* AgnesManager.m */,
-				A78C5D9315AA719D007EC021 /* AgnesManagerDelegate.h */,
-				A72FD7EA159FFBD000B322CF /* AgnesCore.h */,
-				A72FD7EB159FFBD000B322CF /* AgnesCore.m */,
-				A72FD7FC159FFE0A00B322CF /* AgnesSocket.h */,
-				A72FD7FD159FFE0A00B322CF /* AgnesSocket.m */,
-				A758B9DC15A9105300A3594D /* AgnesCommands.h */,
-				A758B9DD15A9105300A3594D /* AgnesCommands.m */,
-				A758B9D315A8FF1C00A3594D /* AgnesParser.h */,
-				A758B9D415A8FF1C00A3594D /* AgnesParser.m */,
-				A78C5D8A15AA494E007EC021 /* AgnesParserCommand.h */,
-				A78C5D8B15AA494E007EC021 /* AgnesParserCommand.m */,
-				A72FD80015A00FA700B322CF /* AgnesConnection.h */,
-				A72FD80115A00FA700B322CF /* AgnesConnection.m */,
-				A7609B5D15A0E445001792B7 /* AgnesConnectionDelegate.h */,
-				A78C5D9D15AAC602007EC021 /* AgnesUser.h */,
-				A78C5D9E15AAC603007EC021 /* AgnesUser.m */,
-				A78C5DD315AB9D6D007EC021 /* AgnesChannel.h */,
-				A78C5DD415AB9D6D007EC021 /* AgnesChannel.m */,
-				A72FD7F1159FFC1200B322CF /* Async */,
-				A72FD7E4159FFBD000B322CF /* Supporting Files */,
-			);
-			path = AgnesCore;
-			sourceTree = "<group>";
-		};
-		A72FD7E4159FFBD000B322CF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A72FD7E5159FFBD000B322CF /* AgnesCore-Info.plist */,
-				A72FD7E6159FFBD000B322CF /* InfoPlist.strings */,
-				A72FD7E9159FFBD000B322CF /* AgnesCore-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A72FD7F1159FFC1200B322CF /* Async */ = {
-			isa = PBXGroup;
-			children = (
-				A703DC6715A27FF400B09F7C /* AsyncSocket.h */,
-				A703DC6815A27FF400B09F7C /* AsyncSocket.m */,
-				A703DC6915A27FF400B09F7C /* AsyncUdpSocket.h */,
-				A703DC6A15A27FF400B09F7C /* AsyncUdpSocket.m */,
-			);
-			name = Async;
-			sourceTree = "<group>";
-		};
 		A7609B4C15A07A35001792B7 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,29 +140,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		A72FD7DE159FFBD000B322CF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A72FD7FE159FFE0A00B322CF /* AgnesSocket.h in Headers */,
-				A72FD80215A00FA700B322CF /* AgnesConnection.h in Headers */,
-				A7609B5C15A0E30B001792B7 /* Agnes.h in Headers */,
-				A7609B5E15A0E445001792B7 /* AgnesConnectionDelegate.h in Headers */,
-				A703DC6B15A27FF400B09F7C /* AsyncSocket.h in Headers */,
-				A703DC6D15A27FF400B09F7C /* AsyncUdpSocket.h in Headers */,
-				A758B9D515A8FF1C00A3594D /* AgnesParser.h in Headers */,
-				A758B9DE15A9105300A3594D /* AgnesCommands.h in Headers */,
-				A78C5D8C15AA494E007EC021 /* AgnesParserCommand.h in Headers */,
-				A78C5D9115AA7003007EC021 /* AgnesManager.h in Headers */,
-				A78C5D9415AA719D007EC021 /* AgnesManagerDelegate.h in Headers */,
-				A78C5D9F15AAC603007EC021 /* AgnesUser.h in Headers */,
-				A78C5DD515AB9D6D007EC021 /* AgnesChannel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A72FD7B7159FF81E00B322CF /* Mixtape */ = {
@@ -293,24 +158,6 @@
 			productName = Mixtape;
 			productReference = A72FD7B8159FF81E00B322CF /* Mixtape.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A72FD7E0159FFBD000B322CF /* AgnesCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A72FD7ED159FFBD000B322CF /* Build configuration list for PBXNativeTarget "AgnesCore" */;
-			buildPhases = (
-				A72FD7DC159FFBD000B322CF /* Sources */,
-				A72FD7DD159FFBD000B322CF /* Frameworks */,
-				A72FD7DE159FFBD000B322CF /* Headers */,
-				A72FD7DF159FFBD000B322CF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AgnesCore;
-			productName = AgnesCore;
-			productReference = A72FD7E1159FFBD000B322CF /* AgnesCore.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -334,7 +181,6 @@
 			projectRoot = "";
 			targets = (
 				A72FD7B7159FF81E00B322CF /* Mixtape */,
-				A72FD7E0159FFBD000B322CF /* AgnesCore */,
 			);
 		};
 /* End PBXProject section */
@@ -352,14 +198,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A72FD7DF159FFBD000B322CF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A72FD7E8159FFBD000B322CF /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -372,24 +210,6 @@
 				A7609B4B15A07A1B001792B7 /* MixConnectionDelegate.m in Sources */,
 				A78C5D9815AA7275007EC021 /* MixManagerDelegate.m in Sources */,
 				A78C5DD215AB343C007EC021 /* OptionsWindow.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A72FD7DC159FFBD000B322CF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A72FD7EC159FFBD000B322CF /* AgnesCore.m in Sources */,
-				A72FD7FF159FFE0A00B322CF /* AgnesSocket.m in Sources */,
-				A72FD80315A00FA700B322CF /* AgnesConnection.m in Sources */,
-				A703DC6C15A27FF400B09F7C /* AsyncSocket.m in Sources */,
-				A703DC6E15A27FF400B09F7C /* AsyncUdpSocket.m in Sources */,
-				A758B9D615A8FF1C00A3594D /* AgnesParser.m in Sources */,
-				A758B9DF15A9105300A3594D /* AgnesCommands.m in Sources */,
-				A78C5D8D15AA494E007EC021 /* AgnesParserCommand.m in Sources */,
-				A78C5D9215AA7003007EC021 /* AgnesManager.m in Sources */,
-				A78C5DA015AAC603007EC021 /* AgnesUser.m in Sources */,
-				A78C5DD615AB9D6D007EC021 /* AgnesChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,14 +238,6 @@
 				A72FD7D2159FF81E00B322CF /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		A72FD7E6159FFBD000B322CF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A72FD7E7159FFBD000B322CF /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		A7609B5315A0C67A001792B7 /* MainWindow.xib */ = {
@@ -492,6 +304,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Mixtape-cguydnvhvzwmxuadrwkuslanniny/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Mixtape-dfpovtgxfkyjurefmaxotwjhbmnm/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
@@ -507,40 +320,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Mixtape-cguydnvhvzwmxuadrwkuslanniny/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Mixtape-dfpovtgxfkyjurefmaxotwjhbmnm/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		A72FD7EE159FFBD000B322CF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AgnesCore/AgnesCore-Prefix.pch";
-				INFOPLIST_FILE = "AgnesCore/AgnesCore-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		A72FD7EF159FFBD000B322CF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AgnesCore/AgnesCore-Prefix.pch";
-				INFOPLIST_FILE = "AgnesCore/AgnesCore-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -561,15 +347,6 @@
 			buildConfigurations = (
 				A72FD7D7159FF81E00B322CF /* Debug */,
 				A72FD7D8159FF81E00B322CF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A72FD7ED159FFBD000B322CF /* Build configuration list for PBXNativeTarget "AgnesCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A72FD7EE159FFBD000B322CF /* Debug */,
-				A72FD7EF159FFBD000B322CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

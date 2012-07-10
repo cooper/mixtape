@@ -9,7 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Agnes.h"
+#import <Agnes/Agnes.h>
 
 @interface MixManagerDelegate : NSObject <AgnesManagerDelegate>
 

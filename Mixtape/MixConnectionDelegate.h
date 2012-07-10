@@ -9,7 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Agnes.h"
+#import <Agnes/Agnes.h>
 
 // this class implements the AgnesConnectionDelegate protocol.
 // it will receive messages related to connection-specific events.
