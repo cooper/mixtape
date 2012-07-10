@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Mixtape' target in the 'Mixtape' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
