@@ -46,6 +46,7 @@
     }
 }
 
+// parse an incoming JSON event.
 - (void)handleMessage:(NSString *)json {
     NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
     NSArray *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -54,6 +55,7 @@
     [self fireEvent:command withArguments:arguments];
 }
 
+// fire event callbacks.
 - (void)fireEvent:(NSString *)command withArguments:(NSDictionary *)arguments {
     NSMutableArray *events = [eventHandlers objectForKey:command];
     if (events == nil) return;
@@ -124,6 +126,9 @@
 
 /* end ObjC */
 
+
+/* frame load delegate */
+
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
     if (frame != [sender mainFrame]) return;
     loadComplete = true;
@@ -133,5 +138,7 @@
         buffer = nil;
     }
 }
+
+/* end frame load delegate */
 
 @end
