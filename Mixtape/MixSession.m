@@ -10,6 +10,6 @@
 
 @implementation MixSession
 
-@synthesize isServer, isChannel, isUser, febView;
+@synthesize isServer, isChannel, isUser, feb;
 
 @end

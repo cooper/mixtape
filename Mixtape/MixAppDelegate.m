@@ -10,7 +10,7 @@
 
 @implementation MixAppDelegate
 
-@synthesize clientManager, window, optionsWindow, webView, febView;
+@synthesize clientManager, window, optionsWindow, webView, feb;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -29,7 +29,7 @@
     AgnesConnection *conn = [clientManager createConnection:@"irc.mac-mini.org" port:6697 ssl:true];
     [conn connect];
     
-    febView = [[FebView alloc] initWithView:webView];
+    feb = [[Feb alloc] initWithView:webView];
     NSString *path = [NSString stringWithFormat:@"file://%@/index.html", [[NSBundle mainBundle] resourcePath]];
     [[webView mainFrame] loadRequest: [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:path]]];
 }

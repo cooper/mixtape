@@ -21,10 +21,20 @@
 		A7BDBE4415AC1328008A8666 /* MixSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE4315AC1328008A8666 /* MixSession.m */; };
 		A7BDBE4615AC365D008A8666 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BDBE4515AC365C008A8666 /* WebKit.framework */; };
 		A7BDBE4F15AC7EFC008A8666 /* Options.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5115AC7EFC008A8666 /* Options.xib */; };
-		A7BDBE5815AC7FBA008A8666 /* FebView.js in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5915AC7FBA008A8666 /* FebView.js */; };
+		A7BDBE5815AC7FBA008A8666 /* feb.js in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5915AC7FBA008A8666 /* feb.js */; };
 		A7BDBE5B15AC9C12008A8666 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5A15AC9C12008A8666 /* index.html */; };
-		A7BDBE6015ACA923008A8666 /* FebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE5F15ACA923008A8666 /* FebView.m */; };
+		A7BDBE6015ACA923008A8666 /* Feb.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE5F15ACA923008A8666 /* Feb.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7788B9115AD0E9300AE8573 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7FDC28A15ABCF1600E8BC6E;
+			remoteInfo = Agnes;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A72FD7B8159FF81E00B322CF /* Mixtape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtape.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +64,10 @@
 		A7BDBE4315AC1328008A8666 /* MixSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixSession.m; sourceTree = "<group>"; };
 		A7BDBE4515AC365C008A8666 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A7BDBE5015AC7EFC008A8666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Options.xib; sourceTree = "<group>"; };
-		A7BDBE5915AC7FBA008A8666 /* FebView.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = FebView.js; sourceTree = "<group>"; };
+		A7BDBE5915AC7FBA008A8666 /* feb.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = feb.js; sourceTree = "<group>"; };
 		A7BDBE5A15AC9C12008A8666 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		A7BDBE5E15ACA923008A8666 /* FebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FebView.h; sourceTree = "<group>"; };
-		A7BDBE5F15ACA923008A8666 /* FebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FebView.m; sourceTree = "<group>"; };
+		A7BDBE5E15ACA923008A8666 /* Feb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feb.h; sourceTree = "<group>"; };
+		A7BDBE5F15ACA923008A8666 /* Feb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feb.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,11 +168,19 @@
 			name = Interface;
 			sourceTree = "<group>";
 		};
+		A7788B8E15AD0E9300AE8573 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7788B9215AD0E9300AE8573 /* Agnes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A7BDBE4C15AC7D07008A8666 /* FebView */ = {
 			isa = PBXGroup;
 			children = (
-				A7BDBE5E15ACA923008A8666 /* FebView.h */,
-				A7BDBE5F15ACA923008A8666 /* FebView.m */,
+				A7BDBE5E15ACA923008A8666 /* Feb.h */,
+				A7BDBE5F15ACA923008A8666 /* Feb.m */,
 			);
 			name = FebView;
 			sourceTree = "<group>";
@@ -178,7 +196,7 @@
 		A7BDBE5D15ACA52D008A8666 /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
-				A7BDBE5915AC7FBA008A8666 /* FebView.js */,
+				A7BDBE5915AC7FBA008A8666 /* feb.js */,
 			);
 			name = JavaScript;
 			sourceTree = "<group>";
@@ -222,6 +240,12 @@
 			mainGroup = A72FD7AD159FF81E00B322CF;
 			productRefGroup = A72FD7B9159FF81E00B322CF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A7788B8E15AD0E9300AE8573 /* Products */;
+					ProjectRef = A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A72FD7B7159FF81E00B322CF /* Mixtape */,
@@ -229,12 +253,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A7788B9215AD0E9300AE8573 /* Agnes.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Agnes.framework;
+			remoteRef = A7788B9115AD0E9300AE8573 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A72FD7B6159FF81E00B322CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BDBE5815AC7FBA008A8666 /* FebView.js in Resources */,
+				A7BDBE5815AC7FBA008A8666 /* feb.js in Resources */,
 				A72FD7C7159FF81E00B322CF /* InfoPlist.strings in Resources */,
 				A72FD7CD159FF81E00B322CF /* Credits.rtf in Resources */,
 				A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */,
@@ -257,7 +291,7 @@
 				A78C5D9815AA7275007EC021 /* MixManagerDelegate.m in Sources */,
 				A78C5DD215AB343C007EC021 /* OptionsWindow.m in Sources */,
 				A7BDBE4415AC1328008A8666 /* MixSession.m in Sources */,
-				A7BDBE6015ACA923008A8666 /* FebView.m in Sources */,
+				A7BDBE6015ACA923008A8666 /* Feb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

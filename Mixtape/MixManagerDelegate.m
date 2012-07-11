@@ -20,7 +20,7 @@
     conn.session = sess;
     NSLog(@"calling sendMessage");
     NSDictionary *args = [NSDictionary dictionaryWithObject:@"test" forKey:@"param"];
-    [[APP_DELEGATE febView] sendMessage:@"hi" withArguments:args];
+    [[APP_DELEGATE feb] sendMessage:@"hi" withArguments:args];
 }
 
 @end

@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FebView.h"
+#import "Feb.h"
 
 @interface MixSession : NSObject
 
 @property BOOL isServer;
 @property BOOL isChannel;
 @property BOOL isUser;
-@property (retain) FebView *febView;
+@property (retain) Feb *feb;
 
 @end

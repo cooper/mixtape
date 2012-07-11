@@ -1,14 +1,16 @@
 //
-//  FebView.m
+//  Feb.m, FebView.m
 //  Mixtape
 //
 //  Created by Mitchell Cooper on 7/10/12.
 //  Copyright (c) 2012 mac-mini.org. All rights reserved.
 //
+// Documentation: https://github.com/cooper/mixtape/wiki/Feb
+//
 
-#import "FebView.h"
+#import "Feb.h"
 
-@implementation FebView
+@implementation Feb
 
 - (id)initWithView:(WebView *)view
 {
