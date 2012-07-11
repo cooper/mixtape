@@ -18,6 +18,20 @@ feb.sendMessage = function (name, object) {
     return ObjC.sendJSON_(json);
 };
 
+feb.deleteHandler = function (id, name) {
+    if (!eventHandlers[name]) return false;
+    var final = [];
+    var didIt = false;
+    for (var o in eventHandlers[name]) {
+        if (o[0] != id) {
+            final.push(o);
+            didIt = true;
+        }
+    }
+    eventHandlers[name] = final;
+    return didIt;
+};
+
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
