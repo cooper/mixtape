@@ -31,7 +31,7 @@
     
     feb = [[Feb alloc] initWithView:webView];
     
-    [feb on:@"themeInfo" do:^(NSString *name, NSDictionary *arguments) {
+    [feb on:@"themeInfo" do:^(NSDictionary *arguments) {
         NSLog(@"got theme info: name = %@, author = %@, version = %@",
             [arguments objectForKey:@"name"],
             [arguments objectForKey:@"author"],

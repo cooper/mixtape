@@ -46,20 +46,42 @@
     }
 }
 
+- (void)handleMessage:(NSString *)json {
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *command = [result objectAtIndex:0];
+    NSDictionary *arguments = [result objectAtIndex:1];
+    [self fireEvent:command withArguments:arguments];
+}
+
+- (void)fireEvent:(NSString *)command withArguments:(NSDictionary *)arguments {
+    NSMutableArray *events = [eventHandlers objectForKey:command];
+    if (events == nil) return;
+
+    // call each callback with arguments.
+    for (NSArray *e in events)
+        ((FebCallback)[e objectAtIndex:1])(arguments);
+}
+
 // add an event handler.
-- (void)on:(NSString *)command do:(FebCallback)callback {
+- (int)on:(NSString *)command do:(FebCallback)callback {
     NSMutableArray *events;
     
     // if event array does not exist, create it.
     NSMutableArray *foundEvents = [eventHandlers objectForKey:command];
     if (foundEvents)
         events = foundEvents;
-    else
+    else {
         events = [[NSMutableArray alloc] init];
-    
-    NSArray *thisEvent = [NSArray arrayWithObjects:[NSNumber numberWithInt:currentId++], callback, nil];
+        [eventHandlers setObject:events forKey:command];
+    }
+
+    // register the event.
+    int myId = currentId++;
+    NSArray *thisEvent = [NSArray arrayWithObjects:[NSNumber numberWithInt:myId], callback, nil];
     [events addObject:thisEvent];
-    NSLog(@"installing handler %d for %@", currentId-1, command);
+
+    return myId;
 }
 
 /* ObjC */
@@ -67,6 +89,7 @@
 // receive an event.
 - (void)sendJSON:(NSString *)json {
     NSLog(@"got JSON: %@", json);
+    [self handleMessage:json];
 }
 
 - (void)NSLog:(NSString *)string {
