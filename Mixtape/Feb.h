@@ -24,5 +24,6 @@ typedef void (^FebCallback)(NSDictionary *arguments);
 - (id)initWithView:(WebView *)view;
 - (id)sendMessage:(NSString *)command withArguments:(NSDictionary *)arguments;
 - (int)on:(NSString *)command do:(FebCallback)callback;
+- (BOOL)deleteHandler:(int)id fromEvent:(NSString *)command;
 
 @end

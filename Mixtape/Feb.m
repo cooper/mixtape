@@ -84,6 +84,24 @@
     return myId;
 }
 
+// delete an event handler.
+- (BOOL)deleteHandler:(int)id fromEvent:(NSString *)command {
+    NSMutableArray *events = [eventHandlers objectForKey:command];
+    
+    // no handlers for this event at all...
+    if (events == nil) return FALSE;
+    
+    // look for an event with this id.
+    for (NSArray *e in events) {
+        if (![[e objectAtIndex:0] isEqualToNumber:[NSNumber numberWithInt:id]])
+            continue;
+        [events removeObject:e];
+        return TRUE;
+    }
+    
+    return FALSE;
+}
+
 /* ObjC */
 
 // receive an event.
