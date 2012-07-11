@@ -11,13 +11,18 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
+typedef void (^FebCallback)(NSString *name, NSDictionary *arguments);
+
 @interface Feb : NSObject {
     WebView *webView;
     NSMutableArray *buffer;
+    NSMutableDictionary *eventHandlers;
     BOOL loadComplete;
+    int currentId;
 }
 
 - (id)initWithView:(WebView *)view;
 - (id)sendMessage:(NSString *)command withArguments:(NSDictionary *)arguments;
+- (void)on:(NSString *)command do:(FebCallback)callback;
 
 @end

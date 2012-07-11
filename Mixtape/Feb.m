@@ -16,9 +16,12 @@
 {
     self = [super init];
     if (self) {
-        buffer = [[NSMutableArray alloc] init];
+        currentId = 0;
+        eventHandlers = [[NSMutableDictionary alloc] init];
+        buffer  = [[NSMutableArray alloc] init];
         webView = view;
         webView.frameLoadDelegate = self;
+        [[webView windowScriptObject] setValue:self forKey:@"ObjC"];
     }
     return self;
 }
@@ -42,6 +45,43 @@
         return nil;
     }
 }
+
+// add an event handler.
+- (void)on:(NSString *)command do:(FebCallback)callback {
+    NSMutableArray *events;
+    
+    // if event array does not exist, create it.
+    NSMutableArray *foundEvents = [eventHandlers objectForKey:command];
+    if (foundEvents)
+        events = foundEvents;
+    else
+        events = [[NSMutableArray alloc] init];
+    
+    NSArray *thisEvent = [NSArray arrayWithObjects:[NSNumber numberWithInt:currentId++], callback, nil];
+    [events addObject:thisEvent];
+    NSLog(@"installing handler %d for %@", currentId-1, command);
+}
+
+/* ObjC */
+
+// receive an event.
+- (void)sendJSON:(NSString *)json {
+    NSLog(@"got JSON: %@", json);
+}
+
+- (void)NSLog:(NSString *)string {
+    NSLog(@"feb: %@", string);
+}
+
+
++ (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector {
+    if (aSelector == @selector(sendJSON:) ||
+        aSelector == @selector(NSLog:))
+        return NO;
+    return YES;
+}
+
+/* end ObjC */
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
     if (frame != [sender mainFrame]) return;

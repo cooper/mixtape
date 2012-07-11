@@ -30,8 +30,18 @@
     [conn connect];
     
     feb = [[Feb alloc] initWithView:webView];
+    
+    [feb on:@"themeInfo" do:^(NSString *name, NSDictionary *arguments) {
+        NSLog(@"got theme info: name = %@, author = %@, version = %@",
+            [arguments objectForKey:@"name"],
+            [arguments objectForKey:@"author"],
+            [arguments objectForKey:@"version"]
+        );
+    }];
+    
     NSString *path = [NSString stringWithFormat:@"file://%@/index.html", [[NSBundle mainBundle] resourcePath]];
     [[webView mainFrame] loadRequest: [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:path]]];
+    
 }
 
 
