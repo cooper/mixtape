@@ -18,9 +18,13 @@
 - (void)createConnectionSession:(AgnesManager *)manager connection:(AgnesConnection *)conn {
     MixSession *sess = [[MixSession alloc] init];
     conn.session = sess;
-    NSLog(@"calling sendMessage");
-    NSDictionary *args = [NSDictionary dictionaryWithObject:@"test" forKey:@"param"];
-    [[APP_DELEGATE feb] sendMessage:@"hi" withArguments:args];
+    sess.feb = [APP_DELEGATE feb];
+    NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
+        [NSNumber numberWithInt:conn.sid],      @"id",
+        conn.address,                           @"name",
+        conn.nickname,                          @"nick",
+    nil];
+    [sess.feb sendMessage:@"createServerTab" withArguments:args];
 }
 
 @end
