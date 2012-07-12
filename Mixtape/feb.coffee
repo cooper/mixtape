@@ -1,4 +1,4 @@
-feb = version: 1.0
+feb = window.feb = version: 1.0
 
 currentId = 0
 eventHandlers = {}
