@@ -35,7 +35,8 @@
     
     // page has loaded, so go ahead and send the event and return its return value.
     if (loadComplete) {
-        id ret = [[webView windowScriptObject] callWebScriptMethod:@"FebHandleEvent" withArguments:args];
+        id ret = [[[webView windowScriptObject] valueForKey:@"feb"]
+                    callWebScriptMethod:@"_handleEvent" withArguments:args];
         return ret;
     }
     
@@ -55,7 +56,6 @@
     [self fireEvent:command withArguments:arguments];
 }
 
-// fire event callbacks.
 - (void)fireEvent:(NSString *)command withArguments:(NSDictionary *)arguments {
     NSMutableArray *events = [eventHandlers objectForKey:command];
     if (events == nil) return;

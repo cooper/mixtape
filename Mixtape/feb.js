@@ -1,10 +1,16 @@
-function FebHandleEvent(data) {
-
-}
-
 (function () {
 
 var feb = window.feb = { version: 1.0 }, currentId = 0, eventHandlers = {};
+
+feb._handleEvent = function (data) {
+    var ary = JSON.parse(data);
+    feb._fireEvent(ary[0], ary[1]);
+};
+
+feb._fireEvent = function (name, object) {
+    if (!eventHandlers[name]) return;
+    for (var o in eventHandlers[name]) o[1](callback);
+};
 
 feb.on = function (name, callback) {
     var myId = currentId++;
@@ -33,9 +39,3 @@ feb.deleteHandler = function (id, name) {
 };
 
 })();
-
-document.addEventListener("DOMContentLoaded", function () {
-    for (var key in window) {
-        document.write(key + "<br>");
-    }
-});
