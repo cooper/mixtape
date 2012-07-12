@@ -16,11 +16,14 @@
 {
     self = [super init];
     if (self) {
-        currentId = 0;
+        currentId     = 0;
         eventHandlers = [[NSMutableDictionary alloc] init];
+        loadComplete  = 0;
         buffer  = [[NSMutableArray alloc] init];
         webView = view;
         webView.frameLoadDelegate = self;
+        
+        // bind ObjC and inject feb.js.
         [[webView windowScriptObject] setValue:self forKey:@"ObjC"];
     }
     return self;
@@ -34,7 +37,7 @@
     NSArray *args = [NSArray arrayWithObject:string];
     
     // page has loaded, so go ahead and send the event and return its return value.
-    if (loadComplete) {
+    if (loadComplete >= 2) {
         id ret = [[[webView windowScriptObject] valueForKey:@"feb"]
                     callWebScriptMethod:@"_handleEvent" withArguments:args];
         return ret;
@@ -56,6 +59,7 @@
     [self fireEvent:command withArguments:arguments];
 }
 
+// fire event callbacks.
 - (void)fireEvent:(NSString *)command withArguments:(NSDictionary *)arguments {
     NSMutableArray *events = [eventHandlers objectForKey:command];
     if (events == nil) return;
@@ -116,10 +120,16 @@
     NSLog(@"feb: %@", string);
 }
 
+- (void)febLoaded {
+    loadComplete++;
+    NSLog(@"got it: %d", loadComplete);
+    [self flushIfDone];
+}
 
 + (BOOL)isSelectorExcludedFromWebScript:(SEL)aSelector {
     if (aSelector == @selector(sendJSON:) ||
-        aSelector == @selector(NSLog:))
+        aSelector == @selector(NSLog:)    ||
+        aSelector == @selector(febLoaded))
         return NO;
     return YES;
 }
@@ -129,16 +139,30 @@
 
 /* frame load delegate */
 
+- (void)webView:(WebView *)sender didCommitLoadForFrame:(WebFrame *)frame {
+    [[sender windowScriptObject] evaluateWebScript:@"\
+        document.addEventListener(\"DOMContentLoaded\", function () {\
+            var script   = document.createElement('script');\
+            script.type  = \"text/javascript\";\
+            script.src   = \"feb.js\";\
+            document.head.appendChild(script);\
+        });\
+    "];
+}
+
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
     if (frame != [sender mainFrame]) return;
-    loadComplete = true;
-    if ([buffer count] != 0) {
-        for (NSArray *args in buffer)
-            [[webView windowScriptObject] callWebScriptMethod:@"FebHandleEvent" withArguments:args];
-        buffer = nil;
-    }
+    loadComplete++;
+    [self flushIfDone];
 }
 
 /* end frame load delegate */
+
+- (void)flushIfDone {
+    if ([buffer count] == 0 || loadComplete < 2) return;
+    for (NSArray *args in buffer)
+        [[[webView windowScriptObject] valueForKey:@"feb"]
+            callWebScriptMethod:@"_handleEvent" withArguments:args];
+}
 
 @end

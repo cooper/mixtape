@@ -15,6 +15,7 @@
 		A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72FD7D1159FF81E00B322CF /* MainMenu.xib */; };
 		A7609B4B15A07A1B001792B7 /* MixConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7609B4A15A07A1B001792B7 /* MixConnectionDelegate.m */; };
 		A7609B5115A0C67A001792B7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7609B5315A0C67A001792B7 /* MainWindow.xib */; };
+		A7788B9915AE7E1A00AE8573 /* coffeescript.js in Resources */ = {isa = PBXBuildFile; fileRef = A7788B9715AE78BF00AE8573 /* coffeescript.js */; };
 		A78C5D9815AA7275007EC021 /* MixManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D9715AA7275007EC021 /* MixManagerDelegate.m */; };
 		A78C5DD215AB343C007EC021 /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5DD115AB343C007EC021 /* OptionsWindow.m */; };
 		A7BDBE3915ABD447008A8666 /* Agnes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BDBE3715ABD399008A8666 /* Agnes.framework */; };
@@ -54,6 +55,7 @@
 		A7609B4915A07A1B001792B7 /* MixConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixConnectionDelegate.h; sourceTree = "<group>"; };
 		A7609B4A15A07A1B001792B7 /* MixConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixConnectionDelegate.m; sourceTree = "<group>"; };
 		A7609B5215A0C67A001792B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A7788B9715AE78BF00AE8573 /* coffeescript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = coffeescript.js; sourceTree = "<group>"; };
 		A78C5D9615AA7275007EC021 /* MixManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixManagerDelegate.h; sourceTree = "<group>"; };
 		A78C5D9715AA7275007EC021 /* MixManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixManagerDelegate.m; sourceTree = "<group>"; };
 		A78C5DD015AB343C007EC021 /* OptionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsWindow.h; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				A7BDBE5915AC7FBA008A8666 /* feb.js */,
+				A7788B9715AE78BF00AE8573 /* coffeescript.js */,
 			);
 			name = JavaScript;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BDBE5815AC7FBA008A8666 /* feb.js in Resources */,
+				A7788B9915AE7E1A00AE8573 /* coffeescript.js in Resources */,
 				A72FD7C7159FF81E00B322CF /* InfoPlist.strings in Resources */,
 				A72FD7CD159FF81E00B322CF /* Credits.rtf in Resources */,
 				A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */,

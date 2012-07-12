@@ -17,7 +17,7 @@ typedef void (^FebCallback)(NSDictionary *arguments);
     WebView *webView;
     NSMutableArray *buffer;
     NSMutableDictionary *eventHandlers;
-    BOOL loadComplete;
+    int loadComplete;
     int currentId;
 }
 

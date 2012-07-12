@@ -12,6 +12,10 @@ feb._fireEvent = function (name, object) {
     for (var o in eventHandlers[name]) o[1](callback);
 };
 
+feb.log = function (msg) {
+    ObjC.NSLog_(msg);
+};
+
 feb.on = function (name, callback) {
     var myId = currentId++;
     if (!eventHandlers[name]) eventHandlers[name] = [];
@@ -37,5 +41,32 @@ feb.deleteHandler = function (id, name) {
     eventHandlers[name] = final;
     return didIt;
 };
+
+ObjC.febLoaded();
+
+// load coffeescript
+var cscript  = document.createElement("script");
+cscript.type = "text/javascript";
+cscript.src  = "coffeescript.js";
+
+// run a coffeescript
+var runScript = function (thisScript) {
+    if (thisScript.type != "text/feb") return;
+    cscript.addEventListener("load", function () {
+        try {
+            eval(CoffeeScript.compile(thisScript.innerText));
+        }
+        catch(error) {
+            feb.log("could not compile coffeescript: " + error.message);
+        }
+    });
+};
+
+// run all text/feb scripts
+var scripts = document.getElementsByTagName("script");
+for (var script in scripts) runScript(scripts[script]);
+
+// inject coffeescript
+document.head.appendChild(cscript);
 
 })();
