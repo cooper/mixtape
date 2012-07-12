@@ -112,7 +112,6 @@
 
 // receive an event.
 - (void)sendJSON:(NSString *)json {
-    NSLog(@"got JSON: %@", json);
     [self handleMessage:json];
 }
 
@@ -122,7 +121,6 @@
 
 - (void)febLoaded {
     loadComplete++;
-    NSLog(@"got it: %d", loadComplete);
     [self flushIfDone];
 }
 
@@ -144,7 +142,7 @@
         document.addEventListener(\"DOMContentLoaded\", function () {\
             var script   = document.createElement('script');\
             script.type  = \"text/javascript\";\
-            script.src   = \"feb.js\";\
+            script.src   = \"base.js\";\
             document.head.appendChild(script);\
         });\
     "];

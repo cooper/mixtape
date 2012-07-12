@@ -1,72 +1,54 @@
-(function () {
+ObjC.NSLog_ "omfg"
 
-var feb = window.feb = { version: 1.0 }, currentId = 0, eventHandlers = {};
+feb = version: 1.0
 
-feb._handleEvent = function (data) {
-    var ary = JSON.parse(data);
-    feb._fireEvent(ary[0], ary[1]);
-};
+currentId = 0
+eventHandlers = {}
 
-feb._fireEvent = function (name, object) {
-    if (!eventHandlers[name]) return;
-    for (var o in eventHandlers[name]) o[1](callback);
-};
+feb._handleEvent = (data) ->
+    ary = JSON.parse data
+    feb._fireEvent ary[0], ary[1]
 
-feb.log = function (msg) {
-    ObjC.NSLog_(msg);
-};
+feb._fireEvent = (name, object) ->
+    return unless eventHandlers[name]
+    handler[1](object) for handler in eventHandlers[name]
 
-feb.on = function (name, callback) {
-    var myId = currentId++;
-    if (!eventHandlers[name]) eventHandlers[name] = [];
-    eventHandlers[name].push([myId, callback]);
-    return myId;
-};
+feb.log = (msg) ->
+    ObjC.NSLog_ msg
+    
+feb.on = (name, callback) ->
+    myId = currentId++
+    eventHandlers[name] ||= []
+    eventHandlers[name].push [myId, callback]
+    myId
 
-feb.sendMessage = function (name, object) {
-    var json = JSON.stringify([name, object]);
-    return ObjC.sendJSON_(json);
-};
+feb.sendMessage = (name, object) ->
+    json = JSON.stringify [name, object]
+    ObjC.sendJSON_ json
 
-feb.deleteHandler = function (id, name) {
-    if (!eventHandlers[name]) return false;
-    var final = [];
-    var didIt = false;
-    for (var o in eventHandlers[name]) {
-        if (o[0] != id) {
-            final.push(o);
-            didIt = true;
-        }
-    }
-    eventHandlers[name] = final;
-    return didIt;
-};
+feb.deleteHandler = (id, name) ->
+    return false unless eventHandlers[name]
+    final = []
+    didIt = false;
+    
+    for o in eventHandlers[name]
+        if o[0] != id
+            final.push o
+        else
+            didIt = true
+    eventHandlers[name] = final
+    didIt
 
-ObjC.febLoaded();
+ObjC.febLoaded()
 
-// load coffeescript
-var cscript  = document.createElement("script");
-cscript.type = "text/javascript";
-cscript.src  = "coffeescript.js";
 
-// run a coffeescript
-var runScript = function (thisScript) {
-    if (thisScript.type != "text/feb") return;
-    cscript.addEventListener("load", function () {
-        try {
-            eval(CoffeeScript.compile(thisScript.innerText));
-        }
-        catch(error) {
-            feb.log("could not compile coffeescript: " + error.message);
-        }
-    });
-};
+# run a coffeescript
+runScript = (thisScript) ->
+    return if thisScript.type isnt "text/feb"
+    try
+        eval CoffeeScript.compile thisScript.innerText
+    catch error
+        feb.log "could not compile coffeescript: " + error.message
 
-// run all text/feb scripts
-var scripts = document.getElementsByTagName("script");
-for (var script in scripts) runScript(scripts[script]);
-
-// inject coffeescript
-document.head.appendChild(cscript);
-
-})();
+# run all text/feb scripts
+runScript(script) for script in document.getElementsByTagName "script"
