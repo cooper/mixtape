@@ -43,9 +43,6 @@ feb.deleteHandler = (id, name) ->
     eventHandlers[name] = final
     didIt
 
-ObjC.febLoaded()
-
-
 # run a coffeescript
 runScript = (thisScript) ->
 
@@ -64,3 +61,5 @@ runScript = (thisScript) ->
 
 # run all text/feb scripts
 runScript(script) for script in document.getElementsByTagName "script"
+
+ObjC.febLoaded()
