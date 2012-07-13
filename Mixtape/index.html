@@ -1,15 +1,57 @@
 <html>
 
 <head>
-<script type="text/febcs">
+
+<style type="text/css">
+
+/* ALL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* THIS */
+
+#navigator {
+    height: 100%;
+    width: 150px;
+    border-right: 1px solid #000;
+}
+
+.navigator-tab {
+    border-bottom: 1px solid #000;
+    height: 30px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+</style>
+
+<script type="feb/coffeescript">
 
 feb.sendMessage "themeInfo",
     name:    "default theme"
     author:  "Mitchell Cooper"
     version: "1.0"
 
+feb.on 'createServerTab', (args) ->
+    feb.log 'got the event'
+    tab = document.createElement 'div'
+    tab.innerText = args.name
+    tab.classList.add 'navigator-tab'
+    $('navigator').appendChild tab
+
 </script>
     
 </head>
+
+<body>
+
+<div id="navigator">
+
+</div>
+
+</body>
 
 </html>

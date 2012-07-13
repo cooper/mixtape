@@ -3,7 +3,7 @@
 //  Mixtape
 //
 //  Created by Mitchell Cooper on 7/10/12.
-//  Copyright (c) 2012 mac-mini.org. All rights reserved.
+//  Copyright (c) 2012 Hakkin Lain and Mitchell Cooper. All rights reserved.
 //
 // Documentation: https://github.com/cooper/mixtape/wiki/Feb
 //

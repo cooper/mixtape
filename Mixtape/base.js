@@ -1,4 +1,4 @@
-global = window;
+var global = window, $ = function (e) { return document.getElementById(e); };
 
 var console = { log: function (log) { ObjC.NSLog_(log); } };
 

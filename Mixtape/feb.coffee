@@ -46,20 +46,20 @@ feb.deleteHandler = (id, name) ->
 # run a coffeescript
 runScript = (thisScript) ->
 
-    if thisScript.type is "text/febcs"
+    if thisScript.type is "feb/coffeescript"
         try
             eval CoffeeScript.compile thisScript.innerText
         catch error
             feb.log "could not compile coffeescript: " + error.message
             document.body.innerText = "CoffeeScript error: " + error.message
             
-    else if thisScript.type is "text/febjs"
+    else if thisScript.type is "feb/javascript"
         jsScript = document.createElement "script"
         jsScript.innerText = thisScript.innerText
         jsScript.type = "text/javascript"
         document.head.appendChild jsScript
 
 # run all text/feb scripts
-runScript(script) for script in document.getElementsByTagName "script"
+runScript script for script in document.getElementsByTagName "script"
 
 ObjC.febLoaded()
