@@ -26,6 +26,7 @@
 		A7BDBE5815AC7FBA008A8666 /* feb.coffee in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5915AC7FBA008A8666 /* feb.coffee */; };
 		A7BDBE5B15AC9C12008A8666 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5A15AC9C12008A8666 /* index.html */; };
 		A7BDBE6015ACA923008A8666 /* Feb.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE5F15ACA923008A8666 /* Feb.m */; };
+		A7EAC35415B0C6D000D92B86 /* less.js in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC35315B0C55A00D92B86 /* less.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A7BDBE5A15AC9C12008A8666 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		A7BDBE5E15ACA923008A8666 /* Feb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feb.h; sourceTree = "<group>"; };
 		A7BDBE5F15ACA923008A8666 /* Feb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feb.m; sourceTree = "<group>"; };
+		A7EAC35315B0C55A00D92B86 /* less.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = less.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				A7788B9A15AE8D2500AE8573 /* base.js */,
 				A7BDBE5915AC7FBA008A8666 /* feb.coffee */,
 				A7788B9715AE78BF00AE8573 /* coffeescript.js */,
+				A7EAC35315B0C55A00D92B86 /* less.js */,
 			);
 			name = JavaScript;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				A7BDBE5815AC7FBA008A8666 /* feb.coffee in Resources */,
 				A7788B9915AE7E1A00AE8573 /* coffeescript.js in Resources */,
 				A7788B9B15AE91EB00AE8573 /* base.js in Resources */,
+				A7EAC35415B0C6D000D92B86 /* less.js in Resources */,
 				A72FD7C7159FF81E00B322CF /* InfoPlist.strings in Resources */,
 				A72FD7CD159FF81E00B322CF /* Credits.rtf in Resources */,
 				A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */,

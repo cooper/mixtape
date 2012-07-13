@@ -2,7 +2,7 @@
 
 <head>
 
-<style type="text/css">
+<style type="feb/less">
 
 /* ALL */
 
@@ -36,7 +36,6 @@ feb.sendMessage "themeInfo",
     version: "1.0"
 
 feb.on 'createServerTab', (args) ->
-    feb.log 'got the event'
     tab = document.createElement 'div'
     tab.innerText = args.name
     tab.classList.add 'navigator-tab'

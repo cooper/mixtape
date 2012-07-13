@@ -10,6 +10,14 @@
 
 #import "Feb.h"
 
+NSString * const initSript = @"\
+document.addEventListener(\"DOMContentLoaded\", function () {\
+    var script   = document.createElement('script');\
+    script.type  = \"text/javascript\";\
+    script.src   = \"base.js\";\
+    document.head.appendChild(script);\
+});";
+
 @implementation Feb
 
 - (id)initWithView:(WebView *)view
@@ -138,14 +146,7 @@
 /* frame load delegate */
 
 - (void)webView:(WebView *)sender didCommitLoadForFrame:(WebFrame *)frame {
-    [[sender windowScriptObject] evaluateWebScript:@"\
-        document.addEventListener(\"DOMContentLoaded\", function () {\
-            var script   = document.createElement('script');\
-            script.type  = \"text/javascript\";\
-            script.src   = \"base.js\";\
-            document.head.appendChild(script);\
-        });\
-    "];
+    [[sender windowScriptObject] evaluateWebScript:initSript];
 }
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {

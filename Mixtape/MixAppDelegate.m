@@ -14,6 +14,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    // install Agnes.
+    [AgnesCore prepare];
+
     [NSBundle loadNibNamed:@"MainWindow" owner:self];
     // Insert code here to initialize your application
     
