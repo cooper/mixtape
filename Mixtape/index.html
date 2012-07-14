@@ -1,26 +1,20 @@
 <html>
-
 <head>
+<meta name="feb/require" content="mootools" />
 
 <style type="feb/less">
 
-/* ALL */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* THIS */
+@switcher-width: 150px;
+@borders: 1px solid #000;
 
 #navigator {
     height: 100%;
-    width: 150px;
-    border-right: 1px solid #000;
+    width: @switcher-width;
+    border-right: @borders;
 }
 
 .navigator-tab {
-    border-bottom: 1px solid #000;
+    border-bottom: @borders;
     height: 30px;
     padding-left: 5px;
     line-height: 30px;
@@ -30,10 +24,10 @@
 
 <script type="feb/coffeescript">
 
-feb.sendMessage "themeInfo",
-    name:    "default theme"
-    author:  "Mitchell Cooper"
-    version: "1.0"
+feb.sendMessage 'themeInfo',
+    name:    'default theme'
+    author:  'Mitchell Cooper'
+    version: '1.0'
 
 feb.on 'createServerTab', (args) ->
     tab = document.createElement 'div'
@@ -42,14 +36,13 @@ feb.on 'createServerTab', (args) ->
     $('navigator').appendChild tab
 
 </script>
-    
+
 </head>
 
 <body>
 
-<div id="navigator">
-
-</div>
+    <div id="navigator">
+    </div>
 
 </body>
 

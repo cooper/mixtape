@@ -58,7 +58,7 @@ runScript = (thisScript) ->
         jsScript.innerText = thisScript.innerText
         jsScript.type = "text/javascript"
         document.head.appendChild jsScript
-
+        
 # run all text/feb scripts
 runScript script for script in document.getElementsByTagName "script"
 

@@ -1,28 +1,48 @@
-var global = window, $ = function (e) { return document.getElementById(e); };
+var global  = window,
+    console = { log: function (log) { ObjC.NSLog_(log); } };
 
-var console = { log: function (log) { ObjC.NSLog_(log); } };
+function _loadScript(name) {
+    var script  = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = name + ".js";
+    document.head.appendChild(script);
+}
 
-// load coffeescript
-var cscript  = document.createElement("script");
-cscript.type = "text/javascript";
-cscript.src  = "coffeescript.js";
+// load coffeescript compiler
+_loadScript("coffeescript");
 
-// load coffeescript
-var lscript  = document.createElement("script");
-lscript.type = "text/javascript";
-lscript.src  = "less.js";
+// load LESS compiler
+_loadScript("less");
 
+// load default styles
+var bstyle  = document.createElement("link");
+bstyle.rel  = "stylesheet";
+bstyle.type = "text/css";
+bstyle.href = "base.css";
+document.head.appendChild(bstyle);
+
+// load feb.coffee
 var fscript  = document.createElement("script");
 fscript.type = "text/coffeescript";
 fscript.src  = "feb.coffee";
+document.head.appendChild(fscript);
 
+// convert feb/less to text/less
 var scripts = document.getElementsByTagName("style");
 for (var i in scripts) {
     if (scripts[i].type == "feb/less") scripts[i].type = "text/less";
 }
-    
 
-// inject coffeescript and feb
-document.head.appendChild(fscript);
-document.head.appendChild(cscript);
-document.head.appendChild(lscript);
+// load scripts in feb/require
+var metas = document.getElementsByTagName("meta");
+for (var i in metas) {
+    var m = metas[i];
+    switch (m.name) {
+        case "feb/require":
+            var values = m.content.split(" ");
+            for (var i in values) _loadScript(values[i]);
+            break;
+        default:
+            break;
+    }
+}

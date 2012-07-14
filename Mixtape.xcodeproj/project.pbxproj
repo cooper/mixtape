@@ -27,6 +27,8 @@
 		A7BDBE5B15AC9C12008A8666 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5A15AC9C12008A8666 /* index.html */; };
 		A7BDBE6015ACA923008A8666 /* Feb.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE5F15ACA923008A8666 /* Feb.m */; };
 		A7EAC35415B0C6D000D92B86 /* less.js in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC35315B0C55A00D92B86 /* less.js */; };
+		A7EAC35715B0CC5000D92B86 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC35515B0CBF700D92B86 /* base.css */; };
+		A7EAC36D15B1ADF700D92B86 /* mootools.js in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC36C15B1ADE800D92B86 /* mootools.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		A7BDBE5E15ACA923008A8666 /* Feb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feb.h; sourceTree = "<group>"; };
 		A7BDBE5F15ACA923008A8666 /* Feb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feb.m; sourceTree = "<group>"; };
 		A7EAC35315B0C55A00D92B86 /* less.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = less.js; sourceTree = "<group>"; };
+		A7EAC35515B0CBF700D92B86 /* base.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = base.css; sourceTree = "<group>"; };
+		A7EAC36C15B1ADE800D92B86 /* mootools.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mootools.js; sourceTree = "<group>"; };
+		A7EAC36E15B1B25100D92B86 /* jquery.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +148,6 @@
 				A7BDBE4315AC1328008A8666 /* MixSession.m */,
 				A7BDBE4C15AC7D07008A8666 /* FebView */,
 				A7609B4C15A07A35001792B7 /* Interface */,
-				A72FD7C3159FF81E00B322CF /* Supporting Files */,
 			);
 			path = Mixtape;
 			sourceTree = "<group>";
@@ -168,8 +172,10 @@
 				A7BDBE5115AC7EFC008A8666 /* Options.xib */,
 				A7609B5315A0C67A001792B7 /* MainWindow.xib */,
 				A72FD7D1159FF81E00B322CF /* MainMenu.xib */,
+				A72FD7C3159FF81E00B322CF /* Supporting Files */,
 				A7BDBE5C15AC9C19008A8666 /* HTML */,
 				A7BDBE5D15ACA52D008A8666 /* JavaScript */,
+				A7EAC35615B0CC0E00D92B86 /* CSS */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -206,8 +212,18 @@
 				A7BDBE5915AC7FBA008A8666 /* feb.coffee */,
 				A7788B9715AE78BF00AE8573 /* coffeescript.js */,
 				A7EAC35315B0C55A00D92B86 /* less.js */,
+				A7EAC36C15B1ADE800D92B86 /* mootools.js */,
+				A7EAC36E15B1B25100D92B86 /* jquery.js */,
 			);
 			name = JavaScript;
+			sourceTree = "<group>";
+		};
+		A7EAC35615B0CC0E00D92B86 /* CSS */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAC35515B0CBF700D92B86 /* base.css */,
+			);
+			name = CSS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +298,9 @@
 				A7788B9B15AE91EB00AE8573 /* base.js in Resources */,
 				A7EAC35415B0C6D000D92B86 /* less.js in Resources */,
 				A72FD7C7159FF81E00B322CF /* InfoPlist.strings in Resources */,
+				A7EAC36D15B1ADF700D92B86 /* mootools.js in Resources */,
 				A72FD7CD159FF81E00B322CF /* Credits.rtf in Resources */,
+				A7EAC35715B0CC5000D92B86 /* base.css in Resources */,
 				A72FD7D3159FF81E00B322CF /* MainMenu.xib in Resources */,
 				A7609B5115A0C67A001792B7 /* MainWindow.xib in Resources */,
 				A7BDBE4F15AC7EFC008A8666 /* Options.xib in Resources */,
