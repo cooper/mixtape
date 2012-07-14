@@ -31,4 +31,12 @@
     //[textview scrollRangeToVisible:NSMakeRange(textview.string.length, 0)];
 }
 
+- (void)changeServerName:(AgnesConnection *)connection newName:(NSString *)name {
+    Feb *feb = [APP_DELEGATE feb];
+    NSDictionary *arguments = [NSDictionary dictionaryWithObjectsAndKeys:
+        [NSNumber numberWithInt:connection.sid], @"id", name, @"newName",
+    nil];
+    [feb sendMessage:@"changeServerName" withArguments:arguments];
+}
+
 @end

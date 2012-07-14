@@ -34,6 +34,9 @@ feb.on 'createServerTab', (args) ->
     tab.innerText = args.name
     tab.classList.add 'navigator-tab'
     $('navigator').appendChild tab
+    
+feb.on 'changeServerName', (args) ->
+    feb.log "got changeServerName: newName = "+args.newName+", id = "+args.id
 
 </script>
 

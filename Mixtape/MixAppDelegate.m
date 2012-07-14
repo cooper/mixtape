@@ -32,6 +32,10 @@
     AgnesConnection *conn = [clientManager createConnection:@"irc.mac-mini.org" port:6697 ssl:true];
     [conn connect];
     
+    AgnesConnection *conn2 = [clientManager createConnection:@"irc.mac-mini.org" port:6697
+                             ssl:true nick:@"mitchell2" user:@"idk" real:@"mitch"];
+    [conn2 connect];
+    
     feb = [[Feb alloc] initWithView:webView];
     
     [feb on:@"themeInfo" do:^(NSDictionary *arguments) {
