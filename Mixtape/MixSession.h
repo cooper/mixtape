@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Feb.h"
 
+@class AgnesConnection;
+
 @interface MixSession : NSObject
 
 @property BOOL isServer;
 @property BOOL isChannel;
 @property BOOL isUser;
 @property (retain) Feb *feb;
+@property AgnesConnection *connection;
 
 @end

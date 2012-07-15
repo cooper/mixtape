@@ -16,8 +16,9 @@
 
 // create a new session for the server.
 - (void)manager:(AgnesManager *)manager shouldCreateSessionForConnection:(AgnesConnection *)connection {
-    MixSession *sess = [[MixSession alloc] init];
+    MixSession *sess   = [[MixSession alloc] init];
     connection.session = sess;
+    sess.connection    = connection;
     sess.feb = [APP_DELEGATE feb];
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInt:connection.sid],      @"id",
