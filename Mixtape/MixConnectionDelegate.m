@@ -10,6 +10,7 @@
 
 #import "MixConnectionDelegate.h"
 #import "MixAppDelegate.h"
+#define FEB [APP_DELEGATE feb]
 
 // this object will be the delegate of AgnesConnections.
 // this class implements the AgnesConnectionDelegate protocol.
@@ -17,7 +18,7 @@
 
 @implementation MixConnectionDelegate
 
-- (void)onConnectionEstablished:(AgnesConnection *)connection {
+- (void)connectionDidConnect:(AgnesConnection *)connection {
     NSLog(@"Connection established event received in Mixtape!");
 }
 
@@ -25,18 +26,17 @@
 // without the suffixing carriage return and newline.
 // this message is forwarded: AgnesSocket ->
 // AgnesSocketDelegate(AgnesConnection) -> AgnesConnectionDelegate.
-- (void)onRawLine:(AgnesConnection *)connection line:(NSString *)line {
+- (void)connection:(AgnesConnection *)connection didReceiveLine:(NSString *)line {
     //NSTextView *textview = [connection.session textView];
     //[[[textview textStorage] mutableString] appendString: [NSString stringWithFormat:@"%@\n", line]];
     //[textview scrollRangeToVisible:NSMakeRange(textview.string.length, 0)];
 }
 
-- (void)changeServerName:(AgnesConnection *)connection newName:(NSString *)name {
-    Feb *feb = [APP_DELEGATE feb];
+- (void)connection:(AgnesConnection *)connection willChangeServerName:(NSString *)name {
     NSDictionary *arguments = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInt:connection.sid], @"id", name, @"newName",
     nil];
-    [feb sendMessage:@"changeServerName" withArguments:arguments];
+    [FEB sendMessage:@"changeServerName" withArguments:arguments];
 }
 
 @end
