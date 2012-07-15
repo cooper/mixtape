@@ -21,9 +21,9 @@
     sess.connection    = connection;
     sess.feb = [APP_DELEGATE feb];
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSNumber numberWithInt:connection.sid],      @"id",
-        connection.address,                           @"name",
-        connection.nickname,                          @"nick",
+        [NSNumber numberWithInt:connection.identifier],     @"id",
+        connection.address,                                 @"name",
+        connection.nickname,                                @"nick",
     nil];
     [sess.feb sendMessage:@"createServerTab" withArguments:args];
 }
