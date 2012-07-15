@@ -22,14 +22,7 @@
     NSLog(@"Connection established event received in Mixtape!");
 }
 
-// message sent for each raw string line of data from the server
-// without the suffixing carriage return and newline.
-// this message is forwarded: AgnesSocket ->
-// AgnesSocketDelegate(AgnesConnection) -> AgnesConnectionDelegate.
 - (void)connection:(AgnesConnection *)connection didReceiveLine:(NSString *)line {
-    //NSTextView *textview = [connection.session textView];
-    //[[[textview textStorage] mutableString] appendString: [NSString stringWithFormat:@"%@\n", line]];
-    //[textview scrollRangeToVisible:NSMakeRange(textview.string.length, 0)];
 }
 
 - (void)connection:(AgnesConnection *)connection willChangeServerName:(NSString *)name {

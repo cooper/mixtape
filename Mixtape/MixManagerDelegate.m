@@ -15,14 +15,14 @@
 @implementation MixManagerDelegate
 
 // create a new session for the server.
-- (void)createConnectionSession:(AgnesManager *)manager connection:(AgnesConnection *)conn {
+- (void)manager:(AgnesManager *)manager shouldCreateSessionForConnection:(AgnesConnection *)connection {
     MixSession *sess = [[MixSession alloc] init];
-    conn.session = sess;
+    connection.session = sess;
     sess.feb = [APP_DELEGATE feb];
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSNumber numberWithInt:conn.sid],      @"id",
-        conn.address,                           @"name",
-        conn.nickname,                          @"nick",
+        [NSNumber numberWithInt:connection.sid],      @"id",
+        connection.address,                           @"name",
+        connection.nickname,                          @"nick",
     nil];
     [sess.feb sendMessage:@"createServerTab" withArguments:args];
 }
