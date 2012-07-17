@@ -6,11 +6,16 @@
 
 @switcher-width: 150px;
 @borders: 1px solid #000;
+@borders-width: 1px;
 
 #navigator {
     height: 100%;
     width: @switcher-width;
     border-right: @borders;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .navigator-tab {
@@ -20,9 +25,27 @@
     line-height: 30px;
 }
 
+.view {
+    height: 100px;
+    background-color: #aaa;
+    border-bottom: 1px solid red;
+}
+
+#view-container {
+    height: 100%;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: blue;
+    width: dynamicwidth('view-container', 150px + @borders-width);
+}
+
 </style>
 
 <script type="feb/coffeescript">
+
+servers = {}
 
 feb.sendMessage 'themeInfo',
     name:    'default theme'
@@ -30,13 +53,27 @@ feb.sendMessage 'themeInfo',
     version: '1.0'
 
 feb.on 'createServerTab', (args) ->
-    tab = document.createElement 'div'
+
+    tab = new Element 'div'
     tab.innerText = args.name
     tab.classList.add 'navigator-tab'
     $('navigator').appendChild tab
+    tab.store 'id', args.id
+    
+    view = new Element 'div',
+        class: 'view'
+    
+    $('view-container').appendChild view
+    view.store 'id', args.id
+    
+    servers[args.id] =
+        tab:      tab
+        view:     view
+        isServer: true
     
 feb.on 'changeServerName', (args) ->
-    feb.log "got changeServerName: newName = "+args.newName+", id = "+args.id
+    servers[args.id].tab.innerText = args.newName
+    
 
 </script>
 
@@ -45,6 +82,8 @@ feb.on 'changeServerName', (args) ->
 <body>
 
     <div id="navigator">
+    </div>
+    <div id="view-container">
     </div>
 
 </body>

@@ -1570,6 +1570,15 @@ tree.functions = {
     greyscale: function (color) {
         return this.desaturate(color, new(tree.Dimension)(100));
     },
+    dynamicwidth: function(el, size) {
+        window.addEventListener('resize', function () {
+            document.getElementById(el.value).style.width = window.innerWidth - size.value;
+        });
+        return new(tree.Dimension)(window.innerWidth - size.value, "px");
+    },
+    randomcolor: function() {
+        return this.rgba(Math.random() * 255, Math.random() * 255, Math.random() * 255, 1.0);
+    },
     e: function (str) {
         return new(tree.Anonymous)(str instanceof tree.JavaScript ? str.evaluated : str);
     },
