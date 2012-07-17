@@ -10,7 +10,6 @@
 
 #import "MixConnectionDelegate.h"
 #import "MixAppDelegate.h"
-#define FEB [APP_DELEGATE feb]
 
 // this object will be the delegate of AgnesConnections.
 // this class implements the AgnesConnectionDelegate protocol.

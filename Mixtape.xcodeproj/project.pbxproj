@@ -19,13 +19,14 @@
 		A7788B9B15AE91EB00AE8573 /* base.js in Resources */ = {isa = PBXBuildFile; fileRef = A7788B9A15AE8D2500AE8573 /* base.js */; };
 		A78C5D9815AA7275007EC021 /* MixManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5D9715AA7275007EC021 /* MixManagerDelegate.m */; };
 		A78C5DD215AB343C007EC021 /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C5DD115AB343C007EC021 /* OptionsWindow.m */; };
-		A7BDBE3915ABD447008A8666 /* Agnes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BDBE3715ABD399008A8666 /* Agnes.framework */; };
 		A7BDBE4415AC1328008A8666 /* MixSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE4315AC1328008A8666 /* MixSession.m */; };
 		A7BDBE4615AC365D008A8666 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BDBE4515AC365C008A8666 /* WebKit.framework */; };
 		A7BDBE4F15AC7EFC008A8666 /* Options.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5115AC7EFC008A8666 /* Options.xib */; };
 		A7BDBE5815AC7FBA008A8666 /* feb.coffee in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5915AC7FBA008A8666 /* feb.coffee */; };
 		A7BDBE5B15AC9C12008A8666 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A7BDBE5A15AC9C12008A8666 /* index.html */; };
 		A7BDBE6015ACA923008A8666 /* Feb.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDBE5F15ACA923008A8666 /* Feb.m */; };
+		A7E5367C15B6035300F2D5F7 /* Agnes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7788B9215AD0E9300AE8573 /* Agnes.framework */; };
+		A7E5367E15B6038300F2D5F7 /* Agnes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A7788B9215AD0E9300AE8573 /* Agnes.framework */; };
 		A7EAC35415B0C6D000D92B86 /* less.js in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC35315B0C55A00D92B86 /* less.js */; };
 		A7EAC35715B0CC5000D92B86 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC35515B0CBF700D92B86 /* base.css */; };
 		A7EAC36D15B1ADF700D92B86 /* mootools.js in Resources */ = {isa = PBXBuildFile; fileRef = A7EAC36C15B1ADE800D92B86 /* mootools.js */; };
@@ -39,7 +40,27 @@
 			remoteGlobalIDString = A7FDC28A15ABCF1600E8BC6E;
 			remoteInfo = Agnes;
 		};
+		A7E5367F15B6042100F2D5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FDC28915ABCF1600E8BC6E;
+			remoteInfo = Agnes;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7E5367D15B6036800F2D5F7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A7E5367E15B6038300F2D5F7 /* Agnes.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A72FD7B8159FF81E00B322CF /* Mixtape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtape.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +87,6 @@
 		A78C5DD015AB343C007EC021 /* OptionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsWindow.h; sourceTree = "<group>"; };
 		A78C5DD115AB343C007EC021 /* OptionsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsWindow.m; sourceTree = "<group>"; };
 		A7BDBE2415ABD314008A8666 /* Agnes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Agnes.xcodeproj; path = ../Agnes/Agnes.xcodeproj; sourceTree = "<group>"; };
-		A7BDBE3715ABD399008A8666 /* Agnes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agnes.framework; path = "../../Library/Developer/Xcode/DerivedData/Mixtape-dfpovtgxfkyjurefmaxotwjhbmnm/Build/Products/Debug/Agnes.framework"; sourceTree = "<group>"; };
 		A7BDBE4215AC1328008A8666 /* MixSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixSession.h; sourceTree = "<group>"; };
 		A7BDBE4315AC1328008A8666 /* MixSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixSession.m; sourceTree = "<group>"; };
 		A7BDBE4515AC365C008A8666 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -87,8 +107,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BDBE4615AC365D008A8666 /* WebKit.framework in Frameworks */,
-				A7BDBE3915ABD447008A8666 /* Agnes.framework in Frameworks */,
 				A72FD7BD159FF81E00B322CF /* Cocoa.framework in Frameworks */,
+				A7E5367C15B6035300F2D5F7 /* Agnes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				A7BDBE4515AC365C008A8666 /* WebKit.framework */,
-				A7BDBE3715ABD399008A8666 /* Agnes.framework */,
 				A72FD7BC159FF81E00B322CF /* Cocoa.framework */,
 				A72FD7BE159FF81E00B322CF /* Other Frameworks */,
 			);
@@ -236,10 +255,12 @@
 				A72FD7B4159FF81E00B322CF /* Sources */,
 				A72FD7B5159FF81E00B322CF /* Frameworks */,
 				A72FD7B6159FF81E00B322CF /* Resources */,
+				A7E5367D15B6036800F2D5F7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A7E5368015B6042100F2D5F7 /* PBXTargetDependency */,
 			);
 			name = Mixtape;
 			productName = Mixtape;
@@ -326,6 +347,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7E5368015B6042100F2D5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Agnes;
+			targetProxy = A7E5367F15B6042100F2D5F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A72FD7C5159FF81E00B322CF /* InfoPlist.strings */ = {
@@ -431,6 +460,7 @@
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Agnes/Agnes";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -445,9 +475,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../Agnes/Agnes";
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Agnes/Agnes";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

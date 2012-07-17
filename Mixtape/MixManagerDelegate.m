@@ -19,13 +19,13 @@
     MixSession *sess   = [[MixSession alloc] init];
     connection.session = sess;
     sess.connection    = connection;
-    sess.feb = [APP_DELEGATE feb];
+    sess.feb = FEB;
     NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInt:connection.identifier],     @"id",
         connection.address,                                 @"name",
         connection.nickname,                                @"nick",
     nil];
-    [sess.feb sendMessage:@"createServerTab" withArguments:args];
+    [FEB sendMessage:@"createServerTab" withArguments:args];
 }
 
 @end

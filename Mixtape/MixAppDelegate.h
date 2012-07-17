@@ -12,6 +12,7 @@
 #import "MixManagerDelegate.h"
 #import "Feb.h"
 #define APP_DELEGATE (MixAppDelegate *)[[NSApplication sharedApplication] delegate]
+#define FEB [APP_DELEGATE feb]
 
 @interface MixAppDelegate : NSObject <NSApplicationDelegate> {
     MixConnectionDelegate *connDelegate;
