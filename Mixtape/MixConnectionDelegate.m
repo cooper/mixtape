@@ -25,12 +25,11 @@
 }
 
 - (void)connection:(AgnesConnection *)connection willChangeServerName:(NSString *)name {
-    NSDictionary *arguments = [NSDictionary dictionaryWithObjectsAndKeys:
+    [FEB sendMessage:@"changeServerName" withArgumentsAndKeys:
         [NSNumber numberWithInt:connection.identifier],     @"id",
         connection.serverName,                              @"oldName",
         name,                                               @"newName",
     nil];
-    [FEB sendMessage:@"changeServerName" withArguments:arguments];
 }
 
 @end

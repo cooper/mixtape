@@ -58,6 +58,35 @@ document.addEventListener(\"DOMContentLoaded\", function () {\
     }
 }
 
+// send an event convenience method.
+- (id)sendMessage:(NSString *)command withArgumentsAndKeys:(id)firstObject, ... {
+    NSMutableArray *keys   = [NSMutableArray array];
+    NSMutableArray *values = [NSMutableArray array];
+    
+    va_list argumentList;
+    id eachObject;
+    BOOL value = true;
+    
+    if (!firstObject) return nil;
+    [values addObject:firstObject];
+    
+    va_start(argumentList, firstObject);
+    while ((eachObject = va_arg(argumentList, id))) {
+        if (value) {
+            [keys addObject:eachObject];
+            value = false;
+        }
+        else {
+            [values addObject:eachObject];
+            value = true;
+        }
+    }
+    va_end(argumentList);
+
+    NSDictionary *arguments = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    return [self sendMessage:command withArguments:arguments];
+}
+
 // parse an incoming JSON event.
 - (void)handleMessage:(NSString *)json {
     NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];

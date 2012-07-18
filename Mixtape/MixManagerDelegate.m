@@ -20,12 +20,11 @@
     connection.session = sess;
     sess.connection    = connection;
     sess.feb = FEB;
-    NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:
+    [FEB sendMessage:@"createServerTab" withArgumentsAndKeys:
         [NSNumber numberWithInt:connection.identifier],     @"id",
         connection.address,                                 @"name",
         connection.nickname,                                @"nick",
     nil];
-    [FEB sendMessage:@"createServerTab" withArguments:args];
 }
 
 @end
