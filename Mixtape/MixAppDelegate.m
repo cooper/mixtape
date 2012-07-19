@@ -46,7 +46,8 @@
         );
     }];
     
-    NSString *path = [NSString stringWithFormat:@"file://%@/index.html", [[NSBundle mainBundle] resourcePath]];
+    NSString *path = [NSString stringWithFormat:@"file://%@/Resources/HTML/index.html",
+                     [[NSBundle mainBundle] resourcePath]];
     [[webView mainFrame] loadRequest: [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:path]]];
     
 }

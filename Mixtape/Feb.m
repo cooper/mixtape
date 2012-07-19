@@ -14,7 +14,7 @@ NSString * const initSript = @"\
 document.addEventListener(\"DOMContentLoaded\", function () {\
     var script   = document.createElement('script');\
     script.type  = \"text/javascript\";\
-    script.src   = \"base.js\";\
+    script.src   = \"../JavaScript/base.js\";\
     document.head.appendChild(script);\
 });";
 

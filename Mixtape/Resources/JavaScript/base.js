@@ -4,7 +4,7 @@ var global  = window,
 function _loadScript(name) {
     var script  = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = name + ".js";
+    script.src  = "../JavaScript/" + name + ".js";
     document.head.appendChild(script);
 }
 
@@ -24,7 +24,7 @@ document.head.appendChild(bstyle);
 // load feb.coffee
 var fscript  = document.createElement("script");
 fscript.type = "text/coffeescript";
-fscript.src  = "feb.coffee";
+fscript.src  = "../JavaScript/feb.coffee";
 document.head.appendChild(fscript);
 
 // convert feb/less to text/less
